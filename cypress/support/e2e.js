@@ -16,5 +16,28 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+const registerCypressGrep = require('@cypress/grep')
+registerCypressGrep()
+// # run only the tests with "auth user" in the title
+// $ npx cypress run --env grep="auth user"
+// # run tests with "hello" or "auth user" in their titles
+// # by separating them with ";" character
+// $ npx cypress run --env grep="hello; auth user"
+// # run tests tagged @fast
+// $ npx cypress run --env grepTags=@fast
+// # run only the tests tagged "smoke"
+// # that have "login" in their titles
+// $ npx cypress run --env grep=login,grepTags=smoke
+// # only run the specs that have any tests with "user" in their titles
+// $ npx cypress run --env grep=user,grepFilterSpecs=true
+// # only run the specs that have any tests tagged "@smoke"
+// $ npx cypress run --env grepTags=@smoke,grepFilterSpecs=true
+// # run only tests that do not have any tags
+// # and are not inside suites that have any tags
+// $ npx cypress run --env grepUntagged=true
+
+import 'cypress-mochawesome-reporter/register';

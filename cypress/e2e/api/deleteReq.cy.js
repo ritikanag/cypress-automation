@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-const deleteApi  = require("../../support/apiPageFile/putAPI");
+const deleteApi  = require("../../support/apiPageFile/deleteApi");
 
 describe('reqres api tests', () => {
 

@@ -1,0 +1,40 @@
+{
+    "login_data": {
+        "valid_user": [
+            {
+            "test": "Username",
+            "locator": "[formcontrolname=\"service_name\"]",
+            "input_type": "text",
+            "invalid": "",
+            "valid": "text.generatedRandomText()",
+            "error_message": " service name is required "
+            }
+        ],
+        "locked_user": [
+            {
+                "test": "Enter Service Name",
+                "locator": "[formcontrolname=\"service_name\"]",
+                "input_type": "text",
+                "invalid": "",
+                "valid": "codeEasy",
+                "error_message": "service name is required"
+            }
+        ],
+        "problem_user": [
+            {
+                "test": "Enter Service Name",
+                "locator": "[formcontrolname=\"service_name\"]",
+                "input_type": "text",
+                "invalid": "",
+                "valid": "codeEasy",
+                "error_message": "service name is required"
+            }
+        ],
+        "performance_glitch_user": [
+            {
+                "username": "Enter Service Name",
+                "password": "[formcontrolname=\"service_name\"]"
+            }
+        ]     
+    }
+}

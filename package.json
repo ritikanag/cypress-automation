@@ -10,7 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/grep": "^4.0.1",
     "@faker-js/faker": "^8.1.0",
-    "cypress": "^13.3.0"
+    "cypress": "^13.11.0",
+    "cypress-mochawesome-reporter": "^3.7.0"
+  },
+  "dependencies": {
+    "neat-csv": "^5.2.0"
   }
 }

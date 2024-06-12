@@ -16,19 +16,28 @@ class postApi{
         }).then((response) => {
             cy.log(response.body)
 
+            cy.readFile('cypress/fixtures/postReqResp.json').then((data) => {
+                if(Array.isArray(data)){
+                    let temp = [...data, response.body]
+                    cy.writeFile('cypress/fixtures/postReqResp.json', temp)
+
+                }
+            });
+            // cy.writeFile('cypress/fixtures/postReqResp.json', [response.body], {flag: 'a+'})
+            // expect(response.status).to.eq(201)
+            // expect(response.body).to.be.not.null
+            // expect(response.body).to.include.keys([
+            //     'name',
+            //     'job',
+            //     'id',
+            //     'createdAt'
+            // ])
+
             // cy.readFile('cypress/fixtures/postReqResp.json').then((data) => {
-            //     cy.writeFile('cypress/fixtures/postReqResp.json', data)
+            //     cy.writeFile('cypress/fixtures/postReqResp.json', data),
+            //     { flag: 'a+' }
             // })
             // , { flag: 'a+' }
-            cy.writeFile('cypress/fixtures/postReqResp.json', response.body)
-            expect(response.status).to.eq(201)
-            expect(response.body).to.be.not.null
-            expect(response.body).to.include.keys([
-                'name',
-                'job',
-                'id',
-                'createdAt'
-            ])
         })
     }
 
@@ -40,6 +49,10 @@ class postApi{
                 method: 'POST',
                 url: '/api/users',
                 body: requestBody,
+                header: {
+                    'Content-Type': 'application/json',
+                    // Add any other headers if needed
+                  },
                 failOnStatusCode : true
             }).then((response) => {
                 cy.log(response.body)

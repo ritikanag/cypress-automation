@@ -7,6 +7,7 @@ class api{
             failOnStatusCode : true
         }).then((response) => {
             cy.log(response.body)
+            cy.writeFile('cypress/fixtures/get1.json', response.body)
             expect(response.status).to.eq(200)
             expect(response.body).to.be.not.null
             expect(response.body.data[0]).to.include.keys([
