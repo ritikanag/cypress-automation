@@ -2,13 +2,21 @@
     "login_data": {
         "valid_user": [
             {
-            "test": "Username",
-            "locator": "[formcontrolname=\"service_name\"]",
-            "input_type": "text",
-            "invalid": "",
-            "valid": "text.generatedRandomText()",
-            "error_message": " service name is required "
-            }
+                "test": "Username",
+                "locator": "[placeholder=\"Username\"]",
+                "input_type": "text",
+                "invalid": "",
+                "valid": "standard_user",
+                "error_message": "Username is required"
+              },
+              {
+                "test": "Password",
+                "locator": "[placeholder=\"Password\"]",
+                "input_type": "text",
+                "invalid": "",
+                "valid": "secret_sauce",
+                "error_message": "Password is required"
+              }
         ],
         "locked_user": [
             {
