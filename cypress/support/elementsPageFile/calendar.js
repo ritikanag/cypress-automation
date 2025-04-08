@@ -38,6 +38,7 @@ class calendar {
         this.selectHealthcareProgram()
         this.visitDate()
         this.addComment()
+        this.bookAppointmentButton()
     }
 
     selectFacility(){
@@ -63,7 +64,9 @@ class calendar {
     }
     addComment(){
         cy.get("#txt_comment").type(`${this.commentText}`);
-
+    }
+    bookAppointmentButton(){
+        cy.get("#btn-book-appointment").click();
     }
 
 }
