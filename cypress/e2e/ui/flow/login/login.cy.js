@@ -13,10 +13,6 @@ describe('Swag Labs Demo Page Login', function ()
 
   before(() => {
     cy.visit('https://www.saucedemo.com/v1/');
-    //cy.visit(Cypress.env("baseUrlUi"))
-    // cy.fixture(login.json).then((data) => {
-    //     regData = data
-    // })
     Cypress.on('uncaught:exception', (_err, _runnable) => {
       return false;
      });

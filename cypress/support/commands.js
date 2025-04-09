@@ -26,6 +26,8 @@
  
 import { loginPage  } from './uiPageFile/login/loginPage'
 const login = new loginPage ();
+//import neatCSV from 'neat-csv';
+const neatCSV = require('neat-csv');
 
 Cypress.Commands.add('login', (user = "standard_user") => {
     //TODO move this functionality to module file
@@ -44,6 +46,17 @@ Cypress.Commands.add('login', (user = "standard_user") => {
 Cypress.Commands.add('loginWithCredentials',(user)=>{
     cy.get('#user-name').clear().type(user.username);
     cy.get('#password').clear().type(user.password);
-    cy.get('#login-button').click({ force: true })
-    // cy.url().should('contain', 'onboarding/dashboard');        
+    cy.get('#login-button').click({ force: true })      
 })
+
+Cypress.Commands.add('loginFromCSV', () => {
+    cy.readFile('cypress/fixtures/ui/login.csv')
+      .then(neatCSV)
+      .then((users) => {
+        const user = users[0]; // or filter by username if needed
+        cy.log(`Logging in with: ${user.username}, ${user.password}`);
+        cy.get('#user-name').clear().type(user.username);
+        cy.get('#password').clear().type(user.password);
+        cy.get('#login-button').click();
+      });
+  });
