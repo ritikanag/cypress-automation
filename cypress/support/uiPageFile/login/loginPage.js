@@ -4,22 +4,24 @@
 
 
 //let regData
-class loginPage{
+export class loginPage{
 
-    username = 'input[data-test="username"]'
-    password = 'input[data-test="password"]'
-    loginButton = '.btn_action'
-
-    enterUserName(uname) {
-        return cy.get(this.username);
+    enterUsername(username) {
+        return cy.get('#user-name').clear().type(username);
     }
 
-    enterPassword(pswd){
-        return cy.get(this.password)
+    enterPassword(password){
+        return cy.get('#password').clear().type(password)
     }
 
     clickLoginBtn(){
-        return cy.get(this.loginButton).click()
+        return cy.get('#login-button').click()
+    }
+
+    loginWithUsernameAndPassword(username,password){
+        this.enterUsername(username);
+        this.enterPassword(password);
+        this.clickLoginBtn({force:true});
     }
 
     fillAndValidateField = (fields, isFormValidation) => {
@@ -27,7 +29,7 @@ class loginPage{
             if (isFormValidation && field.input !== "dropdown") {
                 cy.get(field.locator).focus().blur();
                 cy.get('body').focus();
-                cy.get('.error-button').contains(field.error_message).should('include.text', field.error_message);
+                cy.get('.text-danger').contains(field.error_message).should('include.text', field.error_message);
             } else {
                 if (field.input === "dropdown") {
                     this.fillDropdownValue(field.locator, field.valid);
@@ -35,35 +37,23 @@ class loginPage{
                     if (field.valid.includes("generateUserEmail()"))
                         cy.get(field.locator).type(eval(field.valid));
                     else
-                        cy.get(field.locator).type(field.valid + this.getRandomNumber(field));
+                        cy.get(field.locator).type(field.valid);
                 }
             }
         })
     }
 
-    
+    fillDropdownValue = (locator, value) => {
+        cy.get(locator).click();
+        cy.get('.ng-option-label').contains(value).click();
+    }
 
-    // login(){
-    //     cy.fixture(login.csv).then(csv).then((data) => {
-    //         regData = data
-    //         cy.log(data.username)
+    getRandomNumber = (field) => {
+        if (field.isUnique) {
+            return Math.floor(Math.random() * 999);
+        } else {
+            return "";
+        }
+    }
 
-    //         for (let i = 0; i < regData.length; i++){
-            
-    //             this.enterUserName().clear().type(regData[i].username)
-    //             this.enterPassword().clear().type(regData[i].password)
-    //             this.clickLoginBtn()
-    //         }  
-    //     })
-        
-    // }
-    
 }
-
-export default new loginPage();
-
-    // login(uname, pswrd){
-    //     this.enterUserName().clear().type(uname)
-    //     this.enterPassword().clear().type(pswrd)
-    //     this.clickLoginBtn()
-    // }

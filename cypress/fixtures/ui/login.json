@@ -7,7 +7,7 @@
                 "input_type": "text",
                 "invalid": "",
                 "valid": "standard_user",
-                "error_message": "Username is required"
+                "error_message": "Epic sadface: Username is required"
               },
               {
                 "test": "Password",
@@ -20,13 +20,21 @@
         ],
         "locked_user": [
             {
-                "test": "Enter Service Name",
-                "locator": "[formcontrolname=\"service_name\"]",
+                "test": "Username",
+                "locator": "[placeholder=\"Username\"]",
                 "input_type": "text",
                 "invalid": "",
-                "valid": "codeEasy",
-                "error_message": "service name is required"
-            }
+                "valid": "locked_out_user",
+                "error_message": "Epic sadface: Username is required"
+              },
+              {
+                "test": "Password",
+                "locator": "[placeholder=\"Password\"]",
+                "input_type": "text",
+                "invalid": "",
+                "valid": "secret_sauce",
+                "error_message": "Epic sadface: Password is required"
+              }
         ],
         "problem_user": [
             {
