@@ -22,20 +22,16 @@ describe('Swag Labs Demo Page Login', function ()
      });
   });
 
-  it('passes', () => {
-    // loginPage.login(loginData.username, loginData.password)
+  it('login using custom method and fixture json with array of field objects', () => {
     login.fillAndValidateField(loginData.login_data.locked_user,false)
   })
   
-  it.skip('passes valid credentials', () => {
+  it('login using loaded fixture and passing object key as string', () => {
     cy.get('.login_logo').should('be.visible');
-    //loginPage.fillAndValidateField(loginData.valid_user, false);
-    // loginPage.enterUserName(loginData.valid_user, false)
-    // loginPage.enterPassword(loginData.valid_user, false)
     cy.login("standard_user")
   })
 
-  it.skip('check login functionality', () => {
+  it('login using imported fixture file where is it not loaded and by passing object with username and password', () => {
     cy.loginWithCredentials(login_Data.standard_user)
   })
 
