@@ -12,10 +12,11 @@
   "devDependencies": {
     "@cypress/grep": "^4.0.1",
     "@faker-js/faker": "^8.1.0",
-    "cypress": "^14.2.1",
+    "cypress": "^14.3.0",
     "cypress-mochawesome-reporter": "^3.7.0"
   },
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
     "neat-csv": "^5.2.0"
   }
 }
