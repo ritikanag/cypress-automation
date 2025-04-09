@@ -8,7 +8,7 @@ import { loginPage } from '../../../../support/uiPageFile/login/loginPage';
 const login = new loginPage();
 //const csv = require('neat-csv')
 
-describe('Swag Labs Demo Page Login', function () 
+describe('Swag Labs Demo Page Login using JSON fixture file', function () 
 {
 
   before(() => {

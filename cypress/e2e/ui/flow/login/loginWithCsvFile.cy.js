@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('Swag Labs Demo Page Login', () => {
+describe('Swag Labs Demo Page Login Using CSV fixture file', () => {
 
   before(() => {
     cy.visit('https://www.saucedemo.com/v1/');
