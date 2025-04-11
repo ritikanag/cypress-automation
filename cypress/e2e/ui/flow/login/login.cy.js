@@ -1,16 +1,12 @@
 /// <reference types='Cypress' />
 
-// const cypressConfig = require("../../../../cypress.config");
 const loginData = require("../../../../fixtures/ui/login.json")
 const login_Data = require("../../../../fixtures/ui/login1.json")
-// const loginPage = require("../../../../support/uiPageFile/login/loginPage")
 import { loginPage } from '../../../../support/uiPageFile/login/loginPage';
 const login = new loginPage();
-//const csv = require('neat-csv')
 
 describe('Swag Labs Demo Page Login using JSON fixture file', function () 
 {
-
   before(() => {
     cy.visit('https://www.saucedemo.com/v1/');
     Cypress.on('uncaught:exception', (_err, _runnable) => {
