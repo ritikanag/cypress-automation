@@ -7,3 +7,4 @@ Feature: End to end saucelabs flow
     And fill the checkout form
     And validate the total price , click finish
     Then verify thank you
+`
