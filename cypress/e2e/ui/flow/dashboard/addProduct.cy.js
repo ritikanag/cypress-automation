@@ -1,6 +1,5 @@
 /// <reference types='Cypress' />
 import addProductPage from "../../../../support/uiPageFile/dashboard/addProductPage"
-import { loginPage } from "../../../../support/uiPageFile/login/loginPage"
 
 describe('Adding multiple products to the cart', ()=>{
 

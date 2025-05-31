@@ -5,3 +5,4 @@ cypress/screenshots/
 mochawesome-report/
 .idea/
 /cypress/downloads/
+node_modules
