@@ -17,6 +17,7 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on);
       return config;
     },
-    baseUrl: 'https://reqres.in/'
+    // baseUrl: 'https://reqres.in/'
+    baseUrl: 'http://localhost:3000/'
   },
 });

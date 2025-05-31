@@ -1,0 +1,114 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-31T14:57:37.790Z",
+    "end": "2025-05-31T14:57:39.013Z",
+    "duration": 1223,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "15894f7f-f774-4dc8-bd1c-16731f0c6430",
+      "title": "",
+      "fullFile": "cypress/e2e/api/deleteReq.cy.js",
+      "file": "cypress/e2e/api/deleteReq.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0d05ebb6-7cfc-46d1-a386-56bdcf4c448b",
+          "title": "reqres api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create a new user using faker",
+              "fullTitle": "reqres api tests create a new user using faker",
+              "timedOut": null,
+              "duration": 1194,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/api/deleteReq.cy.js/reqres api tests -- create a new user using faker (failed).png\"\n    ]\n  ]\n}",
+              "code": "deleteApi.deleteRequest();",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://reqres.in/api/users/2\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: DELETE\nURL: https://reqres.in/api/users/2\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/14.4.0 Chrome/130.0.6723.137 Electron/33.2.1 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 0\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"date\": \"Sat, 31 May 2025 14:57:38 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"72\",\n  \"connection\": \"keep-alive\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"948753254a75377e-CCU\",\n  \"report-to\": \"{\\\"group\\\":\\\"heroku-nel\\\",\\\"max_age\\\":3600,\\\"endpoints\\\":[{\\\"url\\\":\\\"https://nel.heroku.com/reports?ts=1748703458&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=lmwwB5DsvX1swJVXar%2FPRA%2FLBxIfJ%2Bsh7e2LhH9Vjn4%3D\\\"}]}\",\n  \"reporting-endpoints\": \"heroku-nel=https://nel.heroku.com/reports?ts=1748703458&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=lmwwB5DsvX1swJVXar%2FPRA%2FLBxIfJ%2Bsh7e2LhH9Vjn4%3D\",\n  \"nel\": \"{\\\"report_to\\\":\\\"heroku-nel\\\",\\\"max_age\\\":3600,\\\"success_fraction\\\":0.005,\\\"failure_fraction\\\":0.05,\\\"response_headers\\\":[\\\"Via\\\"]}\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"ratelimit-policy\": \"100;w=60\",\n  \"ratelimit-limit\": \"100\",\n  \"ratelimit-remaining\": \"99\",\n  \"ratelimit-reset\": \"60\",\n  \"etag\": \"W/\\\"48-+Z5A4MsbyryWjwqUCtZ7548heDc\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"server-timing\": \"cfL4;desc=\\\"?proto=TCP&rtt=96409&min_rtt=68738&rtt_var=45542&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2803&recv_bytes=638&delivery_rate=54031&cwnd=252&unsent_bytes=0&cid=9ad49df8cf5c2e04&ts=720&x=0\\\"\"\n}\nBody: {\n  \"error\": \"Missing API key.\",\n  \"how_to_get_one\": \"https://reqres.in/signup\"\n}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://reqres.in/api/users/2\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: DELETE\nURL: https://reqres.in/api/users/2\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/14.4.0 Chrome/130.0.6723.137 Electron/33.2.1 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 0\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"date\": \"Sat, 31 May 2025 14:57:38 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"72\",\n  \"connection\": \"keep-alive\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"948753254a75377e-CCU\",\n  \"report-to\": \"{\\\"group\\\":\\\"heroku-nel\\\",\\\"max_age\\\":3600,\\\"endpoints\\\":[{\\\"url\\\":\\\"https://nel.heroku.com/reports?ts=1748703458&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=lmwwB5DsvX1swJVXar%2FPRA%2FLBxIfJ%2Bsh7e2LhH9Vjn4%3D\\\"}]}\",\n  \"reporting-endpoints\": \"heroku-nel=https://nel.heroku.com/reports?ts=1748703458&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=lmwwB5DsvX1swJVXar%2FPRA%2FLBxIfJ%2Bsh7e2LhH9Vjn4%3D\",\n  \"nel\": \"{\\\"report_to\\\":\\\"heroku-nel\\\",\\\"max_age\\\":3600,\\\"success_fraction\\\":0.005,\\\"failure_fraction\\\":0.05,\\\"response_headers\\\":[\\\"Via\\\"]}\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"ratelimit-policy\": \"100;w=60\",\n  \"ratelimit-limit\": \"100\",\n  \"ratelimit-remaining\": \"99\",\n  \"ratelimit-reset\": \"60\",\n  \"etag\": \"W/\\\"48-+Z5A4MsbyryWjwqUCtZ7548heDc\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"server-timing\": \"cfL4;desc=\\\"?proto=TCP&rtt=96409&min_rtt=68738&rtt_var=45542&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2803&recv_bytes=638&delivery_rate=54031&cwnd=252&unsent_bytes=0&cid=9ad49df8cf5c2e04&ts=720&x=0\\\"\"\n}\nBody: {\n  \"error\": \"Missing API key.\",\n  \"how_to_get_one\": \"https://reqres.in/signup\"\n}\n\n\nhttps://on.cypress.io/request\n    at <unknown> (https://reqres.in/__cypress/runner/cypress_runner.js:135957:72)\n    at tryCatcher (https://reqres.in/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://reqres.in/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://reqres.in/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://reqres.in/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://reqres.in/__cypress/runner/cypress_runner.js:1671:18)\n    at _drainQueueStep (https://reqres.in/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://reqres.in/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://reqres.in/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://reqres.in/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at deleteApi.deleteRequest (webpack://cypress/./cypress/support/apiPageFile/deleteApi.js:4:18)\n    at Context.eval (webpack://cypress/./cypress/e2e/api/deleteReq.cy.js:8:14)",
+                "diff": null
+              },
+              "uuid": "9a24ff47-45ed-44cf-a666-06ea70fd11b9",
+              "parentUUID": "0d05ebb6-7cfc-46d1-a386-56bdcf4c448b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9a24ff47-45ed-44cf-a666-06ea70fd11b9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
