@@ -18,6 +18,6 @@ module.exports = defineConfig({
       return config;
     },
     // baseUrl: 'https://reqres.in/'
-    baseUrl: 'http://localhost:3000/'
+    // baseUrl: 'http://localhost:3000/'
   },
 });

@@ -3,7 +3,7 @@ class addProductPage{
     productName = 'div[class=inventory_item_name]'
     secondProduct = 'Sauce Labs Bike Light'
     thirdProduct = 'Sauce Labs Bolt T-Shirt'
-    allProducts = 'inventory_item'
+    allProducts = '.inventory_item'
 
 
     checkAllProducts(){
