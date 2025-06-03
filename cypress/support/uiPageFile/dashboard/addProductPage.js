@@ -1,25 +1,33 @@
 class addProductPage{
 
-    productName = 'div[class=inventory_item_name]'
-    secondProduct = 'Sauce Labs Bike Light'
-    thirdProduct = 'Sauce Labs Bolt T-Shirt'
-    allProducts = '.inventory_item'
+    productsToBeAdded = ['Sauce Labs Bike Light',
+        'Sauce Labs Bolt T-Shirt',
+        'Sauce Labs Backpack',
+        'Sauce Labs Onesie',
+        'Test.allTheThings() T-Shirt (Red)']
+
+    allProducts = '.inventory_item_name '
 
 
     checkAllProducts(){
         return cy.get(this.allProducts)
     }
     
-    addFirstProduct() {
-        return cy.get(this.productName);
+    addProductIndividually(productName) {
+        cy.get('.inventory_item').each(($el) => {
+            cy.wrap($el).find('.inventory_item_name').then(($name) => {
+            const nameText = $name.text().trim();
+            if (nameText === productName) {
+                cy.wrap($el).find('button').click();
+            }
+            });
+        });
     }
 
-    addSecondProduct() {
-        return cy.contains(this.secondProduct);
-    }
-
-    addThirdProduct() {
-        return cy.get(this.thirdProduct);
+    addingAllProducts(){
+        this.productsToBeAdded.forEach((product) => {
+            this.addProductIndividually(product)
+        })
     }
 
     enterPassword(){

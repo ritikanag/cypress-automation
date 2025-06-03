@@ -11,7 +11,14 @@ describe('Adding multiple products to the cart', ()=>{
       });
     });
 
-    it('verify products to be available in the homepage', ()=>{
+    // it('verify products to be available in the homepage', ()=>{
+    //     addProductPage.checkAllProducts().should('be.visible')
+    // })
+
+    it('adding products to the cart', ()=>{
         addProductPage.checkAllProducts().should('be.visible')
+        cy.get('.inventory_item').should('exist');
+        addProductPage.addingAllProducts()
     })
+
 })
