@@ -5,7 +5,10 @@ class postApi{
     createUser() {
         return cy.request({
             method: 'POST',
-            url: '/api/users',
+            url: 'https://reqres.in/api/users',
+            headers: {
+                'x-api-key':'reqres-free-v1'
+            },
             body: {
                 // name: "ritika",
                 // job: "qa"
@@ -15,11 +18,10 @@ class postApi{
             failOnStatusCode : true
         }).then((response) => {
             cy.log(response.body)
-
-            cy.readFile('cypress/fixtures/postReqResp.json').then((data) => {
+            cy.readFile('cypress/fixtures/api/postReqResp.json').then((data) => {
                 if(Array.isArray(data)){
                     let temp = [...data, response.body]
-                    cy.writeFile('cypress/fixtures/postReqResp.json', temp)
+                    cy.writeFile('cypress/fixtures/api/postReqResp.json', temp)
 
                 }
             });
@@ -43,16 +45,17 @@ class postApi{
 
 
     createUserUsingFixture() {
-        cy.fixture('postReqBody').then((data)=>{
+        cy.fixture('api/postReqBody').then((data)=>{
             const requestBody=data;
             cy.request({
                 method: 'POST',
-                url: '/api/users',
-                body: requestBody,
-                header: {
-                    'Content-Type': 'application/json',
+                url: 'https://reqres.in/api/users',
+                headers: {
+                    'content-type': 'application/json',
+                    'x-api-key':'reqres-free-v1'
                     // Add any other headers if needed
-                  },
+                },
+                body: requestBody,
                 failOnStatusCode : true
             }).then((response) => {
                 cy.log(response.body)

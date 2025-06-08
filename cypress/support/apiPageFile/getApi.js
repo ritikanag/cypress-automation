@@ -3,7 +3,10 @@ class api{
     getListUsers() {
         return cy.request({
             method: 'GET',
-            url: '/api/users?page=2',
+            url: 'https://reqres.in/api/users?page=2',
+            headers: {
+                'x-api-key':'reqres-free-v1'
+            },
             failOnStatusCode : true
         }).then((response) => {
             cy.log(response.body)
@@ -24,7 +27,10 @@ class api{
     getSingleUser(){
         return cy.request({
             method: 'GET',
-            url: '/api/users/2',
+            url: 'https://reqres.in/api/users/2',
+            headers: {
+                'x-api-key':'reqres-free-v1'
+            },
             failOnStatusCode : true
         }).then((response) => {
             cy.log(response.body)

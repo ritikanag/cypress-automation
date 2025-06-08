@@ -7,7 +7,7 @@ const login = new loginPage();
 
 describe('Swag Labs Demo Page Login using JSON fixture file', function () 
 {
-  before(() => {
+  beforeEach(() => {
     cy.visit('https://www.saucedemo.com/v1/');
     Cypress.on('uncaught:exception', (_err, _runnable) => {
       return false;

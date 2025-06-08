@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 const api  = require("../../support/apiPageFile/getApi");
-const getJsonDta = require("../../fixtures/get.json")
+const getJsonDta = require("../../fixtures/api/get.json")
 
 describe('reqres api tests', () => {
 
