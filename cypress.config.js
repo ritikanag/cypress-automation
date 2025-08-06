@@ -1,4 +1,5 @@
 const { defineConfig } = require("Cypress");
+const path = require('path');
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
@@ -19,5 +20,12 @@ module.exports = defineConfig({
     },
     // baseUrl: 'https://reqres.in/'
     // baseUrl: 'http://localhost:3000/'
+  },
+  webpack: {
+    resolve: {
+      alias: {
+        '@pages': path.resolve(__dirname, 'cypress/pages'),
+      },
+    },
   },
 });

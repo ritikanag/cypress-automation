@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-const putApi  = require("../../support/apiPageFile/putAPI");
+const putApi  = require("../../pages/apiPageFile/putAPI");
 
 describe('reqres api tests', () => {
 

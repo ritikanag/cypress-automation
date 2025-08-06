@@ -23,8 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
- 
-import { loginPage  } from './uiPageFile/login/loginPage'
+
+import loginPage from '../pages/uiPageFile/login/loginPage';
+
 const login = new loginPage ();
 //import neatCSV from 'neat-csv';
 const neatCSV = require('neat-csv');
@@ -59,4 +60,4 @@ Cypress.Commands.add('loginFromCSV', () => {
         cy.get('#password').clear().type(user.password);
         cy.get('#login-button').click();
       });
-  });
+});

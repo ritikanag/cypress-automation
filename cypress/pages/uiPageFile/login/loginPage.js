@@ -1,10 +1,7 @@
-//const csv = require('neat-csv')
-//const csv = require('neat-csv')
 //const loginData = require("../../../fixtures/ui/login.csv")
 
-
 //let regData
-export class loginPage{
+class loginPage{
 
     enterUsername(username) {
         return cy.get('#user-name').clear().type(username);
@@ -57,3 +54,4 @@ export class loginPage{
     }
 
 }
+export default loginPage;

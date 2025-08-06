@@ -1,6 +1,6 @@
 /// <reference types='Cypress' />
 
-const calendar = require("../../../support/elementsPageFile/calendar")
+const calendar = require("../../../pages/elementsPageFile/calendar")
 
 describe('Calendar Test', function () {
 

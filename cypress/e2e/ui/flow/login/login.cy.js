@@ -2,7 +2,8 @@
 
 const loginData = require("../../../../fixtures/ui/login.json")
 const login_Data = require("../../../../fixtures/ui/login1.json")
-import { loginPage } from '../../../../support/uiPageFile/login/loginPage';
+import loginPage from '../../../../pages/uiPageFile/login/loginPage';
+
 const login = new loginPage();
 
 describe('Swag Labs Demo Page Login using JSON fixture file', function () 

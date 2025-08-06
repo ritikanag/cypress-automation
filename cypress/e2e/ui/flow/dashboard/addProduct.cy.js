@@ -1,5 +1,5 @@
 /// <reference types='Cypress' />
-import addProductPage from "../../../../support/uiPageFile/dashboard/addProductPage"
+import addProductPage from "../../../../pages/uiPageFile/dashboard/addProductPage"
 
 describe('Adding multiple products to the cart', ()=>{
 
