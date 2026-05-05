@@ -5,7 +5,7 @@ class api{
             method: 'GET',
             url: 'https://reqres.in/api/users?page=2',
             headers: {
-                'x-api-key':'reqres-free-v1'
+                'x-api-key':'free_user_3DJXesfDZgoBrOOpUMEU77O19ny'
             },
             failOnStatusCode : true
         }).then((response) => {
@@ -29,7 +29,7 @@ class api{
             method: 'GET',
             url: 'https://reqres.in/api/users/2',
             headers: {
-                'x-api-key':'reqres-free-v1'
+                'x-api-key':'free_user_3DJXesfDZgoBrOOpUMEU77O19ny'
             },
             failOnStatusCode : true
         }).then((response) => {

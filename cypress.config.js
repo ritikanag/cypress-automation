@@ -1,7 +1,9 @@
-const { defineConfig } = require("Cypress");
+const { defineConfig } = require("cypress");
 const path = require('path');
 
 module.exports = defineConfig({
+  projectId: "nps94r",
+  experimentalStudio: true,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     //reportDir: "cypress/results",

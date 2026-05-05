@@ -9,7 +9,7 @@ const login = new loginPage();
 describe('Swag Labs Demo Page Login using JSON fixture file', function () 
 {
   beforeEach(() => {
-    cy.visit('https://www.saucedemo.com/v1/');
+    cy.visit('https://www.saucedemo.com/');
     Cypress.on('uncaught:exception', (_err, _runnable) => {
       return false;
      });

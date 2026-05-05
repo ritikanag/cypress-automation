@@ -7,7 +7,7 @@ class postApi{
             method: 'POST',
             url: 'https://reqres.in/api/users',
             headers: {
-                'x-api-key':'reqres-free-v1'
+                'x-api-key':'free_user_3DJXesfDZgoBrOOpUMEU77O19ny'
             },
             body: {
                 // name: "ritika",
@@ -52,7 +52,7 @@ class postApi{
                 url: 'https://reqres.in/api/users',
                 headers: {
                     'content-type': 'application/json',
-                    'x-api-key':'reqres-free-v1'
+                    'x-api-key':'free_user_3DJXesfDZgoBrOOpUMEU77O19ny'
                     // Add any other headers if needed
                 },
                 body: requestBody,

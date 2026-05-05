@@ -94,5 +94,24 @@
     "job": "Central Paradigm Officer",
     "id": "365",
     "createdAt": "2025-08-06T08:11:30.195Z"
+  },
+  {
+    "name": "Bennie Pfeffer",
+    "job": "Future Interactions Liaison",
+    "id": "782",
+    "createdAt": "2026-05-05T17:16:56.788Z",
+    "_meta": {
+      "powered_by": "ReqRes",
+      "docs_url": "https://app.reqres.in/documentation",
+      "upgrade_url": "https://app.reqres.in/upgrade",
+      "example_url": "https://app.reqres.in/examples/notes-app",
+      "variant": "v1_b",
+      "message": "This is a read-only demo endpoint. Sign up to create your own collections with full CRUD and auth.",
+      "cta": {
+        "label": "Get started",
+        "url": "https://app.reqres.in/upgrade"
+      },
+      "context": "legacy_success"
+    }
   }
 ]
