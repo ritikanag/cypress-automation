@@ -4,7 +4,7 @@ import addProductPage from "../../../../pages/uiPageFile/dashboard/addProductPag
 describe('Adding multiple products to the cart', ()=>{
 
     before(() => {
-    cy.visit('https://www.saucedemo.com/v1/');
+    cy.visit('https://www.saucedemo.com/');
     cy.login("standard_user")
     Cypress.on('uncaught:exception', (_err, _runnable) => {
       return false;
