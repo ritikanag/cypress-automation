@@ -2,13 +2,16 @@ import { faker } from '@faker-js/faker'
 
 class postApi{
 
+    headers ={
+        'content-type': 'application/json',
+        'x-api-key':Cypress.env('apiKey')
+    }
+
     createUser() {
         return cy.request({
             method: 'POST',
             url: 'https://reqres.in/api/users',
-            headers: {
-                'x-api-key':'free_user_3DJXesfDZgoBrOOpUMEU77O19ny'
-            },
+            headers: this.headers,
             body: {
                 // name: "ritika",
                 // job: "qa"
@@ -50,11 +53,7 @@ class postApi{
             cy.request({
                 method: 'POST',
                 url: 'https://reqres.in/api/users',
-                headers: {
-                    'content-type': 'application/json',
-                    'x-api-key':'free_user_3DJXesfDZgoBrOOpUMEU77O19ny'
-                    // Add any other headers if needed
-                },
+                headers: this.headers,
                 body: requestBody,
                 failOnStatusCode : true
             }).then((response) => {

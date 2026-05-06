@@ -1,12 +1,15 @@
 class api{
 
+    headers ={
+        'content-type': 'application/json',
+        'x-api-key':Cypress.env('apiKey')
+    }
+
     getListUsers() {
         return cy.request({
             method: 'GET',
             url: 'https://reqres.in/api/users?page=2',
-            headers: {
-                'x-api-key':'free_user_3DJXesfDZgoBrOOpUMEU77O19ny'
-            },
+            headers: this.headers,
             failOnStatusCode : true
         }).then((response) => {
             cy.log(response.body)
@@ -28,9 +31,7 @@ class api{
         return cy.request({
             method: 'GET',
             url: 'https://reqres.in/api/users/2',
-            headers: {
-                'x-api-key':'free_user_3DJXesfDZgoBrOOpUMEU77O19ny'
-            },
+            headers: this.headers,
             failOnStatusCode : true
         }).then((response) => {
             cy.log(response.body)

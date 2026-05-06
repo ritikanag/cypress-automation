@@ -23,6 +23,9 @@ module.exports = defineConfig({
     // baseUrl: 'https://reqres.in/'
     // baseUrl: 'http://localhost:3000/'
   },
+  env: {
+    apiKey: process.env.API_KEY
+  },
   webpack: {
     resolve: {
       alias: {
